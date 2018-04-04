@@ -14,4 +14,16 @@ function findNextSquare(sq) {
     var root = Math.sqrt(sq);
     return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
 }
-// --------------------------------------------------//
+// ------------------ 124,839 -------------------------------- //
+// NUMBER 2: Your task is to determine whether the numbers are in ascending order.
+function inAscOrder(arr) {
+    let randomArr = arr.concat();
+    randomArr.sort(function (a, b) {
+        return a - b;
+    });
+
+    if (arr.join() == randomArr.join()) {
+        return true;
+    }
+    else { return false; }
+}
