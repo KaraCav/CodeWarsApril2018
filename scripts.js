@@ -27,3 +27,22 @@ function inAscOrder(arr) {
     }
     else { return false; }
 }
+
+// NUMBER 3: In this Kata, you will be given a string with brackets and an index of an opening bracket and your task will be to return the index of the matching closing bracket. An opening brace will always have a closing brace. Return -1 if there is no answer.
+function solve(str, idx) {
+    if (str[idx] !== '(') {
+        return -1;
+    }
+    var count = 1;
+    idx++;
+    while (count > 0) {
+        if (str[idx] == '(') {
+            count += 1;
+        }
+        else if (str[idx] == ')') {
+            count -= 1;
+        }
+        idx++;
+    }
+    return idx - 1;
+}
