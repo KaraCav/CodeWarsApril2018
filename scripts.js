@@ -46,3 +46,18 @@ function solve(str, idx) {
     }
     return idx - 1;
 }
+
+// NUMBER 4: Given an array of integers your solution should find the smallest integer.
+class SmallestIntegerFinder {
+    findSmallestInt(arr) {
+        let s = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (s > arr[i]) {
+                s = arr[i];
+            }
+        }
+        return s;
+    }
+}
+// ------------------ 110,675 -------------------------------- //
+
