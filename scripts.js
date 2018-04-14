@@ -104,7 +104,20 @@ function catMouse(x) {
 function catMouse(x) {
     return x.length <= 5 ? 'Caught!' : 'Escaped!';
 }
-// Number 9 Convert a string to an array
+// Number 9a Convert a string to an array
 function stringToArray(string) {
     return string.split(" ");
+}
+//NUMBER 9 write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'. The string should start with a 1. Ex. A string with size 6 should return :'101010'
+function stringy(size) {
+    var myString = '1';
+    for (let i = 1; i < size; i++) {
+        if (i % 2 === 0) {
+            myString = myString + '1';
+        }
+        else {
+            myString = myString + '0';
+        }
+    }
+    return myString;
 }
