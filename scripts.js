@@ -104,3 +104,7 @@ function catMouse(x) {
 function catMouse(x) {
     return x.length <= 5 ? 'Caught!' : 'Escaped!';
 }
+// Number 9 Convert a string to an array
+function stringToArray(string) {
+    return string.split(" ");
+}
