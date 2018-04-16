@@ -108,7 +108,7 @@ function catMouse(x) {
 function stringToArray(string) {
     return string.split(" ");
 }
-//NUMBER 9 write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'. The string should start with a 1. Ex. A string with size 6 should return :'101010'
+// NUMBER 9 write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'. The string should start with a 1. Ex. A string with size 6 should return :'101010'
 function stringy(size) {
     var myString = '1';
     for (let i = 1; i < size; i++) {
@@ -120,4 +120,15 @@ function stringy(size) {
         }
     }
     return myString;
+}
+// NUMBER 10: Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (= ignore duplicates).
+function minValue(values) {
+    let unique_array = [];
+    for (let i = 0; i < values.length; i++) {
+        if (unique_array.indexOf(values[i]) == -1) {
+            unique_array.push(values[i]);
+        }
+    }
+    unique_array = unique_array.sort().join('');
+    return +(unique_array);
 }
