@@ -132,3 +132,18 @@ function minValue(values) {
     unique_array = unique_array.sort().join('');
     return +(unique_array);
 }
+// ------------------ 84,837 -------------------------------- //
+
+// NUMBER 11: (7 kyu) Find The Maximum Sum That Can Be Made With Three Numbers In The Array Without Including Duplicate Numbers.
+function maxTriSum(numbers) {
+    let uniqueArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (uniqueArray.indexOf(numbers[i]) == -1) {
+            uniqueArray.push(numbers[i]);
+        }
+        uniqueArray = uniqueArray.sort(function (a, b) { return b - a });
+        return (uniqueArray[0] + uniqueArray[1] + uniqueArray[2]);
+    }
+}
+    // --------------- Leaderboard Position: #82,874---------- //
+
