@@ -145,5 +145,21 @@ function maxTriSum(numbers) {
         return (uniqueArray[0] + uniqueArray[1] + uniqueArray[2]);
     }
 }
-    // --------------- Leaderboard Position: #82,874---------- //
+// --------------- Leaderboard Position: #82,874 ---------- //
 
+// NUMBER 12: Find The maximum difference between the successive elements in its sorted form.
+function maxGap(numbers) {
+    let myNewArr = [];
+    for (let i = 0; i < numbers.length; i++) {
+        myNewArr.push(numbers[i]);
+    }
+    myNewArr = myNewArr.sort(function (a, b) { return b - a });
+    console.log(myNewArr);
+    var mySpacearr = [];
+    for (let i = 0; i < myNewArr.length - 1; i++) {
+        mySpacearr.push(myNewArr[i] - myNewArr[i + 1]);
+    }
+    mySpacearr.sort(function (a, b) { return b - a });
+    return mySpacearr[0];
+}
+// --------------- Leaderboard Position: #80,760 ---------- //
