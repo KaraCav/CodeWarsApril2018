@@ -163,3 +163,23 @@ function maxGap(numbers) {
     return mySpacearr[0];
 }
 // --------------- Leaderboard Position: #80,760 ---------- //
+// NUMBER 13: In this kata you get the start number and the end number of a region and should return the count of all numbers except numbers ending in 5. This includes negative numbers. The start and the end number are both inclusive!
+
+function dontGiveMeFive(start, end) {
+    let notFive = [];
+    for (let i = start; i <= end; i++) {
+        if (i === 0) {
+            notFive.push(i);
+        }
+        else if (i < 1) {
+            let newI = (i * -10) / 10;
+            if (newI % 10 !== 5) {
+                notFive.push(i);
+            }
+        }
+        else if (i % 10 !== 5) {
+            notFive.push(i);
+        }
+    }
+    return notFive.length;
+}
