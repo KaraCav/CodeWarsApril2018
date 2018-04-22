@@ -183,3 +183,12 @@ function dontGiveMeFive(start, end) {
     }
     return notFive.length;
 }
+// NUMBER 14: Complete the functionthat removes duplicates from a list of numbers. The order of the sequence needs to stay the same.
+function distinct(arr) {
+    var obj = {};
+    var uniqueArray = arr.filter(function (elem, pos) {
+        return arr.indexOf(elem) == pos;
+    });
+    return uniqueArray;
+    ;
+}
