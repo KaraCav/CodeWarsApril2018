@@ -183,7 +183,7 @@ function dontGiveMeFive(start, end) {
     }
     return notFive.length;
 }
-// NUMBER 14: Complete the functionthat removes duplicates from a list of numbers. The order of the sequence needs to stay the same.
+// NUMBER 14: Complete the function that removes duplicates from a list of numbers. The order of the sequence needs to stay the same.
 function distinct(arr) {
     var obj = {};
     var uniqueArray = arr.filter(function (elem, pos) {
@@ -191,4 +191,20 @@ function distinct(arr) {
     });
     return uniqueArray;
     ;
+}
+
+
+// NUMBER 15: Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once ( ignore duplicates).
+
+const minValue = (values) => {
+    let sorted = values.sort();
+    let lowestNums = [];
+
+    for (let i = 0; i < sorted.length; i++) {
+        if (lowestNums.indexOf(sorted[i]) === -1) {
+            lowestNums.push(sorted[i]);
+        }
+    }
+
+    return Number(lowestNums.join(""));
 }
