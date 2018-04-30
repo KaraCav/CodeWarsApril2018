@@ -208,3 +208,4 @@ const minValue = (values) => {
 
     return Number(lowestNums.join(""));
 }
+// NUMBER 16: Write a function 'feast' that takes a name and food as arguments and returns true or false to indicate whether they begin and end with the same letter. Assume that name and dish are always lowercase strings, and have at least two letters.
