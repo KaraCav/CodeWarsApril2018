@@ -208,4 +208,13 @@ const minValue = (values) => {
 
     return Number(lowestNums.join(""));
 }
-// NUMBER 16: Write a function 'feast' that takes a name and food as arguments and returns true or false to indicate whether they begin and end with the same letter. Assume that name and dish are always lowercase strings, and have at least two letters.
+//  NUMBER 16: Consider an array of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+function countSheeps(arrayOfSheep) {
+    var sheepNum = 0;
+    for (i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
+            sheepNum = sheepNum + 1;
+        }
+    }
+    return sheepNum;
+}
