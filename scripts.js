@@ -218,3 +218,20 @@ function countSheeps(arrayOfSheep) {
     }
     return sheepNum;
 }
+// NUMBER 17: All of the animals are having a feast, and each is bringing one dish. One rule: the dish must start and end with the same letters as the animal's name. Ex. The great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+function feast(beast, dish) {
+    var beastLetters = [];
+    var dishLetters = [];
+    beastLetters.push(beast.charAt(0));
+    beastLetters.push(beast.charAt(beast.length - 1));
+    dishLetters.push(dish.charAt(0));
+    dishLetters.push(dish.charAt(dish.length - 1));
+    if (beastLetters[0] == dishLetters[0] && beastLetters[1] == dishLetters[1]) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
