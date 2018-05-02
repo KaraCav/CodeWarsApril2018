@@ -235,3 +235,16 @@ function feast(beast, dish) {
     }
 }
 
+//NUMBER 18: Write a function to handle traffic light changes from green, to yellow, to red, and then to green again. The function takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to. Ex. Update_light('green') should return 'yellow'.
+
+function updateLight(current) {
+    if (current == "green") {
+        return "yellow"
+    }
+    else if (current == "yellow") {
+        return "red"
+    }
+    else {
+        return "green"
+    }
+}
